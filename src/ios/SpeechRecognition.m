@@ -133,9 +133,9 @@
 - (void) initAudioSession
 {
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryRecord error:nil];
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     [audioSession setMode:AVAudioSessionModeMeasurement error:nil];
-    [audioSession setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
+    [audioSession setActive:YES withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
 }
 
 - (BOOL) permissionIsSet
